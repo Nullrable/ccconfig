@@ -1,0 +1,12 @@
+spring:
+    application:
+        name: config-server
+    datasource:
+        url: jdbc:mysql://localhost:3306/cc_config?useSSL=false
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: nhsoft123
+
+mybatis:
+    type-aliases-package: io.cc.config.server.model
+
