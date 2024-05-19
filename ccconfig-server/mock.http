@@ -1,0 +1,17 @@
+### 注册配置
+POST http://localhost:9000/configs
+Content-Type: application/json
+
+{
+  "app": "application",
+  "env": "dev",
+  "ns": "public",
+  "pkey": "cc.b",
+  "pval": "b_777777"
+}
+
+###
+GET http://localhost:9000/configs?app=application&env=dev&ns=public
+
+###
+GET http://localhost:9000/version?app=application&env=dev&ns=public

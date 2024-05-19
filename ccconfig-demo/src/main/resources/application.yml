@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: ccconfig-demo
+
+server:
+    port: 8787
+
+cc:
+    a: 4444

@@ -1,8 +1,11 @@
+server:
+    port: 9000
+
 spring:
     application:
         name: config-server
     datasource:
-        url: jdbc:mysql://localhost:3306/cc_config?useSSL=false
+        url: jdbc:mysql://localhost:3306/config?useSSL=false
         driver-class-name: com.mysql.cj.jdbc.Driver
         username: root
         password: nhsoft123
