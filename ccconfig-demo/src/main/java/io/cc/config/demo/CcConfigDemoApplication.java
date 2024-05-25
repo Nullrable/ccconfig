@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.context.properties.ConfigurationPropertiesRebinder;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @EnableCcConfig

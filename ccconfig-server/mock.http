@@ -3,11 +3,11 @@ POST http://localhost:9000/configs
 Content-Type: application/json
 
 {
-  "app": "application",
+  "app": "demo-consumer",
   "env": "dev",
   "ns": "public",
-  "pkey": "cc.b",
-  "pval": "b_777777"
+  "pkey": "ccrpc.consumer.faultLimit",
+  "pval": "2"
 }
 
 ###

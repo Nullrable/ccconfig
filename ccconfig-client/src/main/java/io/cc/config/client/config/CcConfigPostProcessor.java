@@ -29,10 +29,10 @@ public class CcConfigPostProcessor implements
         ConfigurableEnvironment ENV = (ConfigurableEnvironment) environment;
 
         RepositoryMeta configMeta = new RepositoryMeta();
-        configMeta.setApp(ENV.getProperty("cc.app", "application"));
-        configMeta.setEnv(ENV.getProperty("cc.env", "dev"));
-        configMeta.setNs(ENV.getProperty("cc.ns", "public"));
-        configMeta.setServer(ENV.getProperty("cc.server", "http://localhost:9000"));
+        configMeta.setApp(ENV.getProperty("ccconfig.app", "application"));
+        configMeta.setEnv(ENV.getProperty("ccconfig.env", "dev"));
+        configMeta.setNs(ENV.getProperty("ccconfig.ns", "public"));
+        configMeta.setServer(ENV.getProperty("ccconfig.server", "http://localhost:9000"));
 
         CcConfigService ccConfigService = CcConfigService.getDefault(applicationContext, configMeta);
 
