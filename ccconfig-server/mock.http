@@ -1,5 +1,5 @@
 ### 注册配置
-POST http://localhost:9000/configs
+POST http://localhost:9001/configs
 Content-Type: application/json
 
 {
@@ -7,11 +7,17 @@ Content-Type: application/json
   "env": "dev",
   "ns": "public",
   "pkey": "ccrpc.consumer.faultLimit",
-  "pval": "2"
+  "pval": "6"
 }
 
 ###
-GET http://localhost:9000/configs?app=application&env=dev&ns=public
+GET http://localhost:9000/configs?app=demo-consumer&env=dev&ns=public
+
+###
+GET http://localhost:9001/configs?app=demo-consumer&env=dev&ns=public
+
+###
+GET http://localhost:9002/configs?app=demo-consumer&env=dev&ns=public
 
 ###
 GET http://localhost:9000/version?app=application&env=dev&ns=public

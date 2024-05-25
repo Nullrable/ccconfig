@@ -1,5 +1,6 @@
 package io.cc.config.server;
 
+import io.cc.config.server.cluster.ClusterManager;
 import io.cc.config.server.model.ConfigMeta;
 import io.cc.config.server.service.ConfigService;
 import jakarta.annotation.Resource;
@@ -19,8 +20,14 @@ public class ConfigController {
     @Resource
     private ConfigService configService;
 
+    @Resource
+    private ClusterManager clusterManager;
+
     @PostMapping("/configs")
     public ConfigMeta save(@RequestBody ConfigMeta configMeta) {
+        if (!clusterManager.isLeader()) {
+            return null;
+        }
         return configService.saveOrUpdate(configMeta);
     }
 
@@ -36,5 +43,10 @@ public class ConfigController {
                                  @RequestParam String env,
                                  @RequestParam String ns) {
         return configService.version(app, env, ns);
+    }
+
+    @GetMapping("/leader")
+    public boolean leader() {
+        return clusterManager.isLeader() ;
     }
 }
